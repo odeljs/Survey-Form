@@ -59,6 +59,37 @@ input{
 
 }
 
+p{
+  color: white;
+  position: relative;
+  width: 60%;
+  left: 20%;
+  right: 20%;
+
+}
+
+#dropdown{
+  position: relative;
+  width: 60%;
+  left: 20%;
+  right: 20%;
+  height: 30px;
+
+}
+
+#radio-selection{
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+#user-election{
+  position: relative;
+  left: 0;
+  width: 10px;
+}
+
+
 </style>
 
 <html>
@@ -78,6 +109,33 @@ input{
     <div class="form-child">
     <label id="number-label" for="number">Age</label>
       <input id="number" type="number" name="age" min="18" max="121" placeholder="Age(Optional)">
+    </div>
+    <div class="form-child">
+      <p>What current piece of legislation would you like to vote on?</p>
+      <select id="dropdown" name="" class="form-control" required>
+        <option disabled selected value>Select legislation</option>
+        <option value="law-1">Law 1</option>
+        <option value="law-2">Law 2</option>
+        <option value="law-3">Law 3</option>
+        <option value="law-4">Law 4</option>
+        <option value="law-5">Law 5</option>
+      </select>
+    </div>
+    <div class="form-child">
+      <p>How would you vote for this legislation?</p>
+      <label id="radio-selection">
+        <input id="user-election" value="Yay" type="radio" class="input-radio" checked>
+        "Yay"
+      </label>
+      <label id="radio-selection">
+        <input id="user-election" value="Yay-with-changes" type="radio" class="input-radio" checked>
+        "Yay with changes"
+      </label>
+      <label id="radio-selection">
+        <input id="user-election" value="Nay" type="radio" class="input-radio" checked>
+        "Nay"
+      </label>
+
     </div>
 
   </form>
